@@ -133,14 +133,14 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
-}
+} 
 
 .nav-links li a {
   text-decoration: none;
   color: white;
   padding: 8px 12px;
   transition: 0.3s;
-}
+} 
 
 .nav-links li a:hover,
 .nav-links li a.active {
@@ -177,9 +177,9 @@ body {
     display: block;
   }
 }
-.search-box input {
+/* .search-box input {
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
   outline: none;
-}
+} */
