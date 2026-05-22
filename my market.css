@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,16 +13,16 @@ body{
     justify-content: space-between;
     border-radius: 1%;
     align-items: center;
-    /* height: 7%;
-    width: 100; */
+    height: 7%;
+    width: 1430px;
     background-color:#111 ;
     
     padding: 15 20 20;
-    /* position: fixed; */
+    position: fixed;
     
 }
 .logo{
-    color: aliceblue;
+    color: white;
     padding: 20px;
     font-size: 25px;
     font-weight: bold;
@@ -32,18 +32,18 @@ body{
 
 .links{
     display: flex;
-   color: aliceblue;
+   color: white;
    font-size: 20px;
    gap: 30px;
    padding: 20px;
-   padding-left: 10%;
+   padding-left: 5%;
    /* justify-content: flex-end; */
    /* margin-left: 70%; */
 
-}
+/* }
 .links li a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
 
 
@@ -76,52 +76,6 @@ input{
     border-radius: 30px;
 }
 
-/* .container{ */
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.box{
-    display: flex;
-    background-color: rgb(223, 206, 206);
-    height: 400px;
-    width: 30%;
-
-}
-
-
-
-.box .image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-}
-
-.box .p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-}
-
-.box .span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-    width: 100%;
-    color: red;
-    font-size: 20px;
-
-} */
 
 .container{
     display: flex;
@@ -130,6 +84,7 @@ input{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    padding-top: 150px;
     background-color: aliceblue;
 }
 
@@ -152,7 +107,7 @@ input{
         margin: 10px 0;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,7 +115,7 @@ input{
     height: 30%;
     width: 100%;
     font-size: 50px; */
-}
+/* }
 
 .box p{
     color: green;
@@ -169,7 +124,7 @@ input{
     justify-content: center;
     align-items: center;
 
-}
+} */
 /* 
 .btn{
     height: 30%;
@@ -181,7 +136,7 @@ input{
     color: white;
 } */
 
-.btn{
+/* .btn{
     background: blue;
     color: white;
     padding: 10px;
@@ -189,4 +144,141 @@ input{
     width: 10%;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.btd{
+  display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin-left: 0%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}    */
+body{
+    background-color: black;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.hh{
+    background-color: blue;
+    border-radius: 30px;
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 400px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+
+/* .btd{
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+} */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 120px;
+    background-color: aliceblue;
+}
+
+.box{
+    width: 280px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.box:hover{
+    transform: translateY(-8px);
+}
+
+.box img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.box h3{
+    text-align: center;
+    margin-top: 8px;
+    font-size: 23px;
+}
+
+.box p{
+    text-align: center;
+    color: green;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 50%;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 65px;
+}
+
+.btn:hover{
+    background: darkblue;
 }
