@@ -128,47 +128,47 @@ let products = [
 
 {
     image : "beagle.webp",
-    name: "beagle",
+    name: "Beagle",
     price: "₦250,000"
 },
 
 {
     image: "bitbull.webp",
-    name: "pitbull",
+    name: "Pitbull",
     price: "₦400,000"
 },
 
 {
     image: "dachshund.webp",
-    name: "dachshund",
+    name: "Dachshund",
     price: "₦500,000"
 },
 
 {
     image: "golden retriver.webp",
-    name: "golden retriver",
+    name: "Golden retriver",
     price: "₦500,000"
 },
 {
     image: "maltipoo.webp",
-    name: "maltipoo",
+    name: "Maltipoo",
     price: "₦500,000"
 },
 {
     image: "pomeranian.webp",
-    name: "pomeranian",
+    name: "Pomeranian",
     price: "₦500,000"
 },
 
 {
     image: "download.webp",
-    name: "worthwriler",
+    name: "Worthwriler",
     price: "₦500,000"
 },
 
 {
     image: "yorkie.webp",
-    name: "yorkie",
+    name: "Yorkie",
     price: "₦500,000"
 },
 

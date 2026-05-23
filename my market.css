@@ -282,3 +282,82 @@ input{
 .btn:hover{
     background: darkblue;
 }
+/* =======================
+   TABLET
+======================= */
+
+@media (max-width: 992px){
+
+    .navbar{
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .input{
+        width: 100%;
+        justify-content: center;
+    }
+
+    input{
+        width: 80%;
+    }
+
+    .links{
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .box{
+        width: 45%;
+    }
+}
+
+
+/* =======================
+   PHONE
+======================= */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .logo{
+        font-size: 22px;
+    }
+
+    .input{
+        width: 100%;
+        justify-content: center;
+    }
+
+    input{
+        width: 90%;
+    }
+
+    .links{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .box{
+        width: 90%;
+        height: auto;
+    }
+
+    .box img{
+        height: 300px;
+    }
+
+    .container{
+        padding-top: 250px;
+    }
+}
