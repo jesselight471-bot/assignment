@@ -124,6 +124,156 @@
 //     `;
 // }
 
+//     NEW ONE 
+
+// let products = [
+
+// {
+//     image : "beagle.webp",
+//     name: "Beagle",
+//     price: "₦250,000"
+// },
+
+// {
+//     image: "bitbull.webp",
+//     name: "Pitbull",
+//     price: "₦400,000"
+// },
+
+// {
+//     image: "dachshund.webp",
+//     name: "Dachshund",
+//     price: "₦500,000"
+// },
+
+// {
+//     image: "golden retriver.webp",
+//     name: "Golden retriver",
+//     price: "₦500,000"
+// },
+// {
+//     image: "maltipoo.webp",
+//     name: "Maltipoo",
+//     price: "₦500,000"
+// },
+// {
+//     image: "pomeranian.webp",
+//     name: "Pomeranian",
+//     price: "₦500,000"
+// },
+
+// {
+//     image: "download.webp",
+//     name: "Worthwriler",
+//     price: "₦500,000"
+// },
+
+// {
+//     image: "yorkie.webp",
+//     name: "Yorkie",
+//     price: "₦500,000"
+// },
+
+
+
+// ];
+
+// let container = document.querySelector(".container");
+// let search = document.querySelector("#search");
+// let cartCount =
+// document.querySelector(
+// "#cart-count"
+// );
+
+// function showProducts(items){
+
+//     container.innerHTML = "";
+
+//     for(let i = 0; i < items.length; i++){
+
+//         container.innerHTML += `
+        
+//         <div class="box">
+
+//             <img src="${items[i].image}">
+
+//             <h3>${items[i].name}</h3>
+
+//             <p>${items[i].price}</p>
+
+//              <button
+//             class="btn"
+//             onclick="addToCart('${items[i].name}')">
+
+//             Add To Cart 🛒
+
+//             </button>  
+
+//         </div>
+        
+//         `;
+//     }
+// }
+
+// showProducts(products);
+
+// search.addEventListener("input", function(){
+
+//     let searchValue =
+//     search.value.toLowerCase();
+
+//     let filteredProducts = [];
+
+//     for(let i = 0; i < products.length; i++){
+
+//         if(
+//             products[i].name
+//             .toLowerCase()
+//             .includes(searchValue)
+//         ){
+
+//             filteredProducts.push(products[i]);
+//         }
+//     }
+
+//     showProducts(filteredProducts);
+
+// });
+
+// let hamburger =
+// document.querySelector("#hamburger");
+
+// let links =
+// document.querySelector(".links");
+
+// hamburger.addEventListener(
+// "click",
+
+// function(){
+
+//     links.classList.toggle(
+//         "active"
+//     );
+
+// });
+// function addToCart(productName){
+
+//     for(let i = 0; i < products.length; i++){
+
+//         if(products[i].name === productName){
+
+//             cart.push(products[i]);
+
+//             cartCount.innerText =
+//             cart.length;
+
+//             console.log(cart);
+
+//         }
+//     }
+// }
+
+
 let products = [
 
 {
@@ -149,11 +299,13 @@ let products = [
     name: "Golden retriver",
     price: "₦500,000"
 },
+
 {
     image: "maltipoo.webp",
     name: "Maltipoo",
     price: "₦500,000"
 },
+
 {
     image: "pomeranian.webp",
     name: "Pomeranian",
@@ -170,14 +322,41 @@ let products = [
     image: "yorkie.webp",
     name: "Yorkie",
     price: "₦500,000"
-},
-
-
+}
 
 ];
 
-let container = document.querySelector(".container");
-let search = document.querySelector("#search");
+
+// ==========================
+// SELECT ELEMENTS
+// ==========================
+
+let container =
+document.querySelector(".container");
+
+let search =
+document.querySelector("#search");
+
+let cartCount =
+document.querySelector("#cart-count");
+
+let hamburger =
+document.querySelector("#hamburger");
+
+let links =
+document.querySelector(".links");
+
+
+// ==========================
+// CART
+// ==========================
+
+let cart = [];
+
+
+// ==========================
+// SHOW PRODUCTS
+// ==========================
 
 function showProducts(items){
 
@@ -191,38 +370,59 @@ function showProducts(items){
 
             <img src="${items[i].image}">
 
-            <h3>${items[i].name}</h3>
+            <h3>
+                ${items[i].name}
+            </h3>
 
-            <p>${items[i].price}</p>
+            <p>
+                ${items[i].price}
+            </p>
 
-            <button class="btn">
+            <button
+            class="btn"
+            onclick="addToCart('${items[i].name}')">
+
                 Add To Cart 🛒
+
             </button>
 
         </div>
-        
         `;
     }
 }
 
+
+// show all products first
 showProducts(products);
 
-search.addEventListener("input", function(){
+
+// ==========================
+// SEARCH
+// ==========================
+
+search.addEventListener(
+"input",
+
+function(){
 
     let searchValue =
     search.value.toLowerCase();
 
     let filteredProducts = [];
 
-    for(let i = 0; i < products.length; i++){
+    for(let i = 0;
+        i < products.length;
+        i++){
 
         if(
-            products[i].name
+            products[i]
+            .name
             .toLowerCase()
             .includes(searchValue)
         ){
 
-            filteredProducts.push(products[i]);
+            filteredProducts
+            .push(products[i]);
         }
     }
 
@@ -230,11 +430,10 @@ search.addEventListener("input", function(){
 
 });
 
-let hamburger =
-document.querySelector("#hamburger");
 
-let links =
-document.querySelector(".links");
+// ==========================
+// HAMBURGER MENU
+// ==========================
 
 hamburger.addEventListener(
 "click",
@@ -246,3 +445,33 @@ function(){
     );
 
 });
+
+
+// ==========================
+// ADD TO CART
+// ==========================
+
+function addToCart(productName){
+
+    for(let i = 0;
+        i < products.length;
+        i++){
+
+        if(
+            products[i].name ===
+            productName
+        ){
+
+            cart.push(
+                products[i]
+            );
+
+            cartCount.innerText =
+            cart.length;
+
+            console.log(cart);
+
+            break;
+        }
+    }
+}

@@ -298,6 +298,7 @@ input{
 
     .hamburger{
         display: block;
+        margin-right: 30px;
     }
 
     .links{
