@@ -282,82 +282,56 @@ input{
 .btn:hover{
     background: darkblue;
 }
-/* =======================
-   TABLET
-======================= */
+/* Hide hamburger on laptop */
 
-@media (max-width: 992px){
-
-    .navbar{
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .input{
-        width: 100%;
-        justify-content: center;
-    }
-
-    input{
-        width: 80%;
-    }
-
-    .links{
-        width: 100%;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .box{
-        width: 45%;
-    }
+.hamburger{
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 
-/* =======================
-   PHONE
-======================= */
+/* PHONE RESPONSIVENESS */
 
 @media (max-width: 768px){
 
-    .navbar{
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    .logo{
-        font-size: 22px;
-    }
-
-    .input{
-        width: 100%;
-        justify-content: center;
-    }
-
-    input{
-        width: 90%;
+    .hamburger{
+        display: block;
     }
 
     .links{
+        display: none;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        background: #111;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 20px;
     }
 
+    .links.active{
+        display: flex;
+    }
+
+    .input{
+        padding-left: 0;
+    }
+
+    input{
+        width: 220px;
+    }
+
+    /* Keep boxes like laptop */
     .box{
-        width: 90%;
-        height: auto;
-    }
-
-    .box img{
-        height: 300px;
+        width: 250px;
     }
 
     .container{
-        padding-top: 250px;
+        padding-top: 130px;
+        gap: 20px;
     }
 }
